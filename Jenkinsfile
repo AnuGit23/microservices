@@ -75,7 +75,7 @@ pipeline {
             steps {
                 parallel (
                     'docker login': {
-                        withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
+                        withCredentials([string(credentialsId: 'dockerpass', variable: 'dockerPassword')]) {
                             sh "docker login -u comdevops -p ${dockerPassword}"
                         }
                     },
